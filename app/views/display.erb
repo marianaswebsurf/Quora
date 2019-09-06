@@ -1,0 +1,27 @@
+
+<br>
+<h1 class="badge badge-warning" style="font-weight: bold; color: #FE1010; font-size: 35px;">ANSWER</h1>
+
+<ul>
+<% @q.answers.each do |answer| %>
+	<li class="list-group-item col-md-3"><div style="font-weight: bold;">
+	<%= answer. content %>
+	</div>
+	</li>
+<% end %>
+</ul>	
+<form action="/display/" method="post">
+    
+    <textarea class="form-control is-invalid col-md-4" id="validationTextarea" name="answer[content]" id="answer_content" cols="30" row="10" placeholder="Enter your problem here"> </textarea>
+	
+	<br>
+	
+	<input type="hidden" name="answer[question_id]" id="answer_question_id" value="<%= @q.id %>">
+
+
+	<button style="font-weight: bold;"class="btn btn-warning" type="submit">Submit</button>
+
+</form>
+</ul>
+
+

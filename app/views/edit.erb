@@ -1,0 +1,17 @@
+
+<div style="margin-top: 80px;"></div>
+<h1 class="badge badge-secondary" style="font-size: 35px; font-weight: bold; color:#FBBE42" >Edit Question</h1>
+
+<form action="/q/<%=@qs.id %>" method="post">
+ 
+	<br>
+
+	<input class="form-control col-md-3" type="text" name="question[content]" value="<%= @qs.content %>">
+
+
+	<input type="hidden" name="_method" value="patch">
+
+	<br>
+
+	<button class="btn btn-warning" type="submit">Submit</button>
+</form>

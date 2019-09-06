@@ -1,0 +1,30 @@
+
+<br>
+<h1 style="font-size: 35px; color: #FBBE42"class="badge badge-secondary">Post A New Question</h1>
+<form action="/question" method="post">
+	
+	<label style="font-weight: bold;" for="exampleFormControlSelect1">Choose category</label>
+    <select name="question[category]" class="form-control col-md-4" id="exampleFormControlSelect1">
+      <option>Entertainment</option>
+      <option>Politic</option>
+      <option>Technology</option>
+      <option>Science</option>
+      <option>Hack</option>
+
+
+      
+	<!-- <select name="question[category]"> <------ first method i use 
+	<option value="Entertainment">Entertainment</option>
+	<option value="Science">Science</option>
+	<option value="Politic">Politic</option>
+	<option value="Hacking">Hacking</option>
+	</select> -->
+	<div style="padding: 4px;"></div>
+	<textarea name="question[content]" cols="40" rows="10"></textarea><br>
+	
+	<a href="/">
+
+	<input class="btn btn-info" type="submit" name="Submit">
+
+	<input class="btn btn-danger" type="button" value="Cancel"></a>
+</form>

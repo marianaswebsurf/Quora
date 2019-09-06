@@ -1,1 +1,29 @@
-<h1>Index</h1>
+
+<br><br>
+
+<h1 style="font-weight: bold; color: #FBBE42; font-size: 35px;" class="badge badge-secondary">QUORA</h1>
+
+<br>	
+
+<a href="/logout" method="post" style="text-decoration: none; font-size: 16px; font-weight: bold; font-family: sans-serif;" class="btn btn-dark" >Log out</a>
+
+
+
+<ul>
+<% @question.each do |q| %>
+
+<% id = q.id %><br>
+	<div style="font-weight: bold; padding: 4spx;">
+	<li><%= q.category %> - <%= q.content %></div>
+	<a class="btn btn-info"  href="/q/edit/<%= q.id %>">Edit</a>
+	 <a class="btn btn-danger" href="/delete?id=<%= q.id %>">Delete</a>
+	 </li>
+	 
+	 <a class ="btn btn-light" href="/display/<%= q.id %>">See answers</a>
+
+	<div style="padding: 5px;"></div>
+
+<% end %>
+</ul>
+
+<a href="/question"><button style="font-weight: bold;" class="btn btn-warning" type="submit" name="Submit">Post A New Question</button></a>
